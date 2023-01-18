@@ -27,7 +27,6 @@ int main()
     }
     // float(size, plus, minus, zero);
 
-    // cout << ;
     cout << setprecision(6) << fixed << plus / size << endl;
     cout << minus / size << endl;
     cout << zero / size << endl;
