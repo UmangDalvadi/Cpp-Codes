@@ -11,7 +11,7 @@ class point
 
 public:
     point(int, int);
-    friend void display(point);
+    friend void display(point, int);
     friend void displaydis(point, point);
 };
 
@@ -21,24 +21,29 @@ point::point(int a, int b)
     y = b;
 }
 
-void display(point a)
+void display(point a, int n)
 {
-    cout << "( " << a.x << ", " << a.y << " )"
+    cout << "point " << n << " : "
+         << "( " << a.x << ", " << a.y << " )"
          << "\n";
 }
 
 void displaydis(point a, point b)
 {
     int i = sqrt((pow(b.x - a.x, 2) + pow(b.y - a.y, 2)));
-    cout << "distance : " << i << "\n";
+    cout << "distance between ( " << a.x << ", " << a.y << " ) "
+         << "and"
+         << " ( " << b.x << ", " << b.y << " ) "
+         << "is"
+         << " : " << i << endl;
 }
 
 int main()
 {
     point a(1, 0);
-    display(a);
+    display(a, 1);
     point b = point(10, 0);
-    display(b);
+    display(b, 2);
     displaydis(a, b);
 
     return 0;
