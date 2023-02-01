@@ -11,7 +11,7 @@ int main()
     int arr[n];
     for (int i = 0; i < n; i++)
     {
-        cin >> arr[i];
+        cin >> arr[i];  //add
     }
     int key;
     cin >> key;
