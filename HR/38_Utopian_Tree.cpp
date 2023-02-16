@@ -3,7 +3,7 @@
 #include <string.h>
 
 using namespace std;
-
+// iiijnk
 int main()
 {
     int n, arr[60], count = 0;
