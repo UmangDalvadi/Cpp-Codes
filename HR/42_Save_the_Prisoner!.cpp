@@ -13,11 +13,16 @@ int main()
     for (int i = 0; i < n; i++)
     {
         int p, s, c, count;
+            // 3     7   3
+            // 7    19   2
         cin >> p >> s >> c;
         count = c;
-        for (int i = 0; i < s; i++)
+        for (int j = 0; j < s; j++)
         {
-
+            if(j==0)
+            {
+                continue;
+            }
             if (count > p)
             {
                 count = 1;
@@ -33,7 +38,7 @@ int main()
     // cout << endl;
     for (int i = 0; i < n; i++)
     {
-        cout << temp[i] + 1 << endl;
+        cout << temp[i] << endl;
     }
 
     return 0;
