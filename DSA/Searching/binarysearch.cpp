@@ -1,41 +1,45 @@
 #include <iostream>
-#include <iomanip>
-#include <string.h>
 
 using namespace std;
 
 int main()
 {
     int n;
+    cout << "Enter the size of array: ";
     cin >> n;
+
     int arr[n];
     for (int i = 0; i < n; i++)
     {
-        cin >> arr[i];  //add
+        cin >> arr[i];
     }
+
+    cout << "Enter key that you want to found: ";
     int key;
     cin >> key;
-    int low = 0, high = n;
-    int mid = (low + high) / 2;
+
+    int low = 0, high = n - 1;
+
     while (low <= high)
     {
+        int mid = low + (high - low) / 2;
         if (arr[mid] == key)
         {
-            cout << mid;
+            cout << "Key found at index: " << mid;
             break;
         }
         else if (arr[mid] > key)
         {
             high = mid - 1;
         }
-        else if (arr[mid] < key)
+        else
         {
             low = mid + 1;
         }
     }
-    if (arr[mid] != key)
+    if (low > high)
     {
-        cout << -1;
+        cout << "Key not found";
     }
 
     return 0;
